@@ -1,0 +1,24 @@
+{
+  "name": "@trailkit/react",
+  "version": "0.1.0",
+  "description": "Embeddable React UI components for trailkit audit logs",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0"
+  },
+  "license": "MIT"
+}

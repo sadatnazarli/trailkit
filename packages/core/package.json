@@ -1,0 +1,65 @@
+{
+  "name": "trailkit",
+  "version": "0.1.0",
+  "description": "Lightweight, zero-infrastructure audit logging for Node.js and TypeScript",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./adapters/memory": {
+      "types": "./dist/adapters/memory.d.ts",
+      "import": "./dist/adapters/memory.js",
+      "require": "./dist/adapters/memory.cjs"
+    },
+    "./adapters/sqlite": {
+      "types": "./dist/adapters/sqlite.d.ts",
+      "import": "./dist/adapters/sqlite.js",
+      "require": "./dist/adapters/sqlite.cjs"
+    },
+    "./adapters/postgres": {
+      "types": "./dist/adapters/postgres.d.ts",
+      "import": "./dist/adapters/postgres.js",
+      "require": "./dist/adapters/postgres.cjs"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.0",
+    "@types/pg": "^8.11.0",
+    "@types/node": "^20.14.0"
+  },
+  "peerDependencies": {
+    "better-sqlite3": ">=9.0.0",
+    "pg": ">=8.0.0"
+  },
+  "peerDependenciesMeta": {
+    "better-sqlite3": { "optional": true },
+    "pg": { "optional": true }
+  },
+  "keywords": [
+    "audit",
+    "audit-log",
+    "compliance",
+    "soc2",
+    "hipaa",
+    "gdpr",
+    "logging",
+    "typescript"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sadatnazarli/trailkit.git",
+    "directory": "packages/core"
+  }
+}
