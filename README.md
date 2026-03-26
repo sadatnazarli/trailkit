@@ -2,6 +2,10 @@
 
 Lightweight, zero-infrastructure audit logging for Node.js and TypeScript.
 
+<p align="center">
+  <img src="demo.gif" alt="trailkit demo" width="800" />
+</p>
+
 Every B2B SaaS eventually gets the question: "who deleted this?" — from a customer, from a compliance auditor, or from your own team debugging a production incident at 2am. trailkit gives you tamper-evident audit logs that install in minutes, with no external services, no infrastructure to manage, and type-safe APIs that feel native to TypeScript.
 
 ```typescript
